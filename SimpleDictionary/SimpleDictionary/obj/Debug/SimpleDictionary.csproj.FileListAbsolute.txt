@@ -8,3 +8,13 @@ C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDiction
 C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.csproj.CoreCompileInputs.cache
 C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.exe
 C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.pdb
+D:\Git\Repos\SimpleDictionary\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.csproj.AssemblyReference.cache
+D:\Git\Repos\SimpleDictionary\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.fMain.resources
+D:\Git\Repos\SimpleDictionary\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.Properties.Resources.resources
+D:\Git\Repos\SimpleDictionary\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.csproj.GenerateResource.cache
+D:\Git\Repos\SimpleDictionary\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.csproj.CoreCompileInputs.cache
+D:\Git\Repos\SimpleDictionary\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.exe
+D:\Git\Repos\SimpleDictionary\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.pdb
+D:\Git\Repos\SimpleDictionary\SimpleDictionary\SimpleDictionary\bin\Debug\SimpleDictionary.exe.config
+D:\Git\Repos\SimpleDictionary\SimpleDictionary\SimpleDictionary\bin\Debug\SimpleDictionary.exe
+D:\Git\Repos\SimpleDictionary\SimpleDictionary\SimpleDictionary\bin\Debug\SimpleDictionary.pdb
