@@ -1,0 +1,10 @@
+C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\bin\Debug\SimpleDictionary.exe.config
+C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\bin\Debug\SimpleDictionary.exe
+C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\bin\Debug\SimpleDictionary.pdb
+C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.csproj.AssemblyReference.cache
+C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.fMain.resources
+C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.Properties.Resources.resources
+C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.csproj.GenerateResource.cache
+C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.csproj.CoreCompileInputs.cache
+C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.exe
+C:\Users\Roman\Desktop\SimpleDictionary\SimpleDictionary\obj\Debug\SimpleDictionary.pdb
