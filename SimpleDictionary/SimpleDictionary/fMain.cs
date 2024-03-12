@@ -14,8 +14,8 @@ namespace SimpleDictionary
     public partial class fMain : Form
     {
         int maxColumsCount = 3;
-        PanelManager panelManager = new PanelManager();
         List<List<string>> dictionary = new List<List<string>>();
+        string lastOpenedFile = "";
         public fMain()
         {
             InitializeComponent();
@@ -27,27 +27,29 @@ namespace SimpleDictionary
             {
                 StreamReader sr = new StreamReader(openFileDialog1.FileName);
                 string readedText = sr.ReadToEnd();
-                updateDictionaryTable(readedText);
-                updateDgvDictionaryTable();
+                sr.Close();
+                dgvDictionaryTable.Rows.Clear();
+                dictionary.Clear();
+                AddRowsToDictionaryTable(readedText);
+                AddRowsToDvgTable();
+                lastOpenedFile = openFileDialog1.FileName;
             }
-            
         }
-        private void WriteToTxtFile(List<List<string>> data, string filePath)
+        private void WriteToTxtFile(List<List<string>> data, StreamWriter writer)
         {
-            using (StreamWriter writer = new StreamWriter(filePath))
+            string line = "";
+            foreach (var row in data)
             {
-                foreach (var record in data)
-                {
-                    string line = string.Join(" - ", record);
-                    writer.WriteLine(line);
-                }
+                line = string.Join(" - ", row);
+                writer.WriteLine(line);
             }
         }
-        private void updateDictionaryTable(string text)
+        private void AddRowsToDictionaryTable(string text)
         {
             List<string> lines = text.Split('\n').ToList();
             foreach(string line in lines)
             {
+                if(line == string.Empty) continue;
                 List<string> values = line.Split(new string[] { " - " }, StringSplitOptions.None).ToList();
                 for (int i = 0; i < values.Count; i++) 
                 {
@@ -60,7 +62,31 @@ namespace SimpleDictionary
                 dictionary.Add(values.ToList());                
             }
         }
-        private void updateDgvDictionaryTable()
+
+        private void updateDictionaryTable(DataGridView dataGridView)
+        {
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    List<string> values = new List<string>();
+
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value != null)
+                        {
+                            values.Add(cell.Value.ToString());
+                        }
+                        else
+                        {
+                            values.Add(string.Empty);
+                        }
+                    }
+                    dictionary.Add(values);
+                }
+            }
+        }
+        private void AddRowsToDvgTable()
         {
             dgvDictionaryTable.Columns.Clear();
             for (int i = 0; i < maxColumsCount; i++)
@@ -84,10 +110,16 @@ namespace SimpleDictionary
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            saveFileDialog1.FileName = lastOpenedFile;
             saveFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
+            dictionary.Clear();
+            updateDictionaryTable(dgvDictionaryTable);
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                WriteToTxtFile(dictionary, saveFileDialog1.FileName);
+                using (StreamWriter writer = new StreamWriter(saveFileDialog1.FileName))
+                {
+                    WriteToTxtFile(dictionary, writer);
+                }
             }
         }
     }
