@@ -13,7 +13,7 @@ namespace SimpleDictionary
 {
     public partial class fMain : Form
     {
-        int maxColumsCount = 3;
+        int maxColumsCount = 0;
         List<List<string>> dictionary = new List<List<string>>();
         string lastOpenedFile = "";
         public fMain()
