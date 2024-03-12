@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tbColumnName = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddColumn = new System.Windows.Forms.Button();
+            this.tbColumnName = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.dgvDictionaryTable = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSelectFile = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnSave = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDictionaryTable)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -57,23 +57,33 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
-            this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel2);
             this.splitContainer1.Panel1.Controls.Add(this.dgvDictionaryTable);
+            this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel2);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 408;
+            this.splitContainer1.SplitterDistance = 407;
             this.splitContainer1.TabIndex = 0;
             // 
-            // tbColumnName
+            // tableLayoutPanel2
             // 
-            this.tbColumnName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbColumnName.Location = new System.Drawing.Point(3, 32);
-            this.tbColumnName.Name = "tbColumnName";
-            this.tbColumnName.Size = new System.Drawing.Size(122, 22);
-            this.tbColumnName.TabIndex = 3;
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.Controls.Add(this.btnSave, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnAddColumn, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tbColumnName, 2, 2);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(800, 59);
+            this.tableLayoutPanel2.TabIndex = 5;
             // 
             // btnAddColumn
             // 
@@ -86,33 +96,12 @@
             this.btnAddColumn.UseVisualStyleBackColor = true;
             this.btnAddColumn.Click += new System.EventHandler(this.btnAddColumn_Click);
             // 
-            // dgvDictionaryTable
+            // tbColumnName
             // 
-            this.dgvDictionaryTable.AllowUserToOrderColumns = true;
-            this.dgvDictionaryTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDictionaryTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDictionaryTable.Location = new System.Drawing.Point(0, 0);
-            this.dgvDictionaryTable.Name = "dgvDictionaryTable";
-            this.dgvDictionaryTable.RowHeadersWidth = 51;
-            this.dgvDictionaryTable.RowTemplate.Height = 24;
-            this.dgvDictionaryTable.Size = new System.Drawing.Size(800, 408);
-            this.dgvDictionaryTable.TabIndex = 1;
-            // 
-            // btnSelectFile
-            // 
-            this.btnSelectFile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSelectFile.Location = new System.Drawing.Point(323, 3);
-            this.btnSelectFile.Name = "btnSelectFile";
-            this.btnSelectFile.Size = new System.Drawing.Size(154, 32);
-            this.btnSelectFile.TabIndex = 0;
-            this.btnSelectFile.Text = "Select file";
-            this.btnSelectFile.UseVisualStyleBackColor = true;
-            this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.RestoreDirectory = true;
+            this.tbColumnName.Location = new System.Drawing.Point(3, 32);
+            this.tbColumnName.Name = "tbColumnName";
+            this.tbColumnName.Size = new System.Drawing.Size(122, 22);
+            this.tbColumnName.TabIndex = 3;
             // 
             // btnSave
             // 
@@ -124,6 +113,18 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // dgvDictionaryTable
+            // 
+            this.dgvDictionaryTable.AllowUserToOrderColumns = true;
+            this.dgvDictionaryTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDictionaryTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDictionaryTable.Location = new System.Drawing.Point(0, 59);
+            this.dgvDictionaryTable.Name = "dgvDictionaryTable";
+            this.dgvDictionaryTable.RowHeadersWidth = 51;
+            this.dgvDictionaryTable.RowTemplate.Height = 24;
+            this.dgvDictionaryTable.Size = new System.Drawing.Size(800, 348);
+            this.dgvDictionaryTable.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -137,26 +138,24 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 38);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 39);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // tableLayoutPanel2
+            // btnSelectFile
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.625F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.375F));
-            this.tableLayoutPanel2.Controls.Add(this.btnAddColumn, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.tbColumnName, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnSave, 2, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(800, 59);
-            this.tableLayoutPanel2.TabIndex = 5;
+            this.btnSelectFile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSelectFile.Location = new System.Drawing.Point(323, 3);
+            this.btnSelectFile.Name = "btnSelectFile";
+            this.btnSelectFile.Size = new System.Drawing.Size(154, 33);
+            this.btnSelectFile.TabIndex = 0;
+            this.btnSelectFile.Text = "Select file";
+            this.btnSelectFile.UseVisualStyleBackColor = true;
+            this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.RestoreDirectory = true;
             // 
             // fMain
             // 
@@ -172,10 +171,10 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDictionaryTable)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDictionaryTable)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
