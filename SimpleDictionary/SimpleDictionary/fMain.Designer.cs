@@ -29,22 +29,27 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvDictionaryTable = new System.Windows.Forms.DataGridView();
+            this.tblpUpperTools = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnAddColumn = new System.Windows.Forms.Button();
             this.tbColumnName = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.dgvDictionaryTable = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblpDownTools = new System.Windows.Forms.TableLayoutPanel();
             this.btnSelectFile = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tblpAddColumn = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDictionaryTable)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tblpUpperTools.SuspendLayout();
+            this.tblpDownTools.SuspendLayout();
+            this.tblpAddColumn.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -58,39 +63,61 @@
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.Controls.Add(this.dgvDictionaryTable);
-            this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel2);
+            this.splitContainer1.Panel1.Controls.Add(this.tblpUpperTools);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer1.Panel2.Controls.Add(this.tblpDownTools);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 407;
             this.splitContainer1.TabIndex = 0;
             // 
-            // tableLayoutPanel2
+            // dgvDictionaryTable
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Controls.Add(this.btnSave, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnAddColumn, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.tbColumnName, 2, 2);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(800, 59);
-            this.tableLayoutPanel2.TabIndex = 5;
+            this.dgvDictionaryTable.AllowUserToOrderColumns = true;
+            this.dgvDictionaryTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDictionaryTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDictionaryTable.Location = new System.Drawing.Point(0, 55);
+            this.dgvDictionaryTable.Name = "dgvDictionaryTable";
+            this.dgvDictionaryTable.RowHeadersWidth = 51;
+            this.dgvDictionaryTable.RowTemplate.Height = 24;
+            this.dgvDictionaryTable.Size = new System.Drawing.Size(800, 352);
+            this.dgvDictionaryTable.TabIndex = 1;
+            // 
+            // tblpUpperTools
+            // 
+            this.tblpUpperTools.ColumnCount = 3;
+            this.tblpUpperTools.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblpUpperTools.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblpUpperTools.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblpUpperTools.Controls.Add(this.btnSave, 2, 0);
+            this.tblpUpperTools.Controls.Add(this.tblpAddColumn, 0, 0);
+            this.tblpUpperTools.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tblpUpperTools.Location = new System.Drawing.Point(0, 0);
+            this.tblpUpperTools.Name = "tblpUpperTools";
+            this.tblpUpperTools.RowCount = 1;
+            this.tblpUpperTools.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblpUpperTools.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblpUpperTools.Size = new System.Drawing.Size(800, 55);
+            this.tblpUpperTools.TabIndex = 5;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSave.Location = new System.Drawing.Point(535, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(262, 49);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnAddColumn
             // 
             this.btnAddColumn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAddColumn.Location = new System.Drawing.Point(3, 3);
             this.btnAddColumn.Name = "btnAddColumn";
-            this.btnAddColumn.Size = new System.Drawing.Size(122, 23);
+            this.btnAddColumn.Size = new System.Drawing.Size(124, 43);
             this.btnAddColumn.TabIndex = 2;
             this.btnAddColumn.Text = "Add column";
             this.btnAddColumn.UseVisualStyleBackColor = true;
@@ -98,48 +125,26 @@
             // 
             // tbColumnName
             // 
-            this.tbColumnName.Location = new System.Drawing.Point(3, 32);
+            this.tbColumnName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tbColumnName.Location = new System.Drawing.Point(0, 21);
             this.tbColumnName.Name = "tbColumnName";
-            this.tbColumnName.Size = new System.Drawing.Size(122, 22);
+            this.tbColumnName.Size = new System.Drawing.Size(123, 22);
             this.tbColumnName.TabIndex = 3;
             // 
-            // btnSave
+            // tblpDownTools
             // 
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSave.Location = new System.Drawing.Point(712, 3);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(85, 23);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // dgvDictionaryTable
-            // 
-            this.dgvDictionaryTable.AllowUserToOrderColumns = true;
-            this.dgvDictionaryTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDictionaryTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDictionaryTable.Location = new System.Drawing.Point(0, 59);
-            this.dgvDictionaryTable.Name = "dgvDictionaryTable";
-            this.dgvDictionaryTable.RowHeadersWidth = 51;
-            this.dgvDictionaryTable.RowTemplate.Height = 24;
-            this.dgvDictionaryTable.Size = new System.Drawing.Size(800, 348);
-            this.dgvDictionaryTable.TabIndex = 1;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.Controls.Add(this.btnSelectFile, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 39);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tblpDownTools.ColumnCount = 3;
+            this.tblpDownTools.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tblpDownTools.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tblpDownTools.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tblpDownTools.Controls.Add(this.btnSelectFile, 1, 0);
+            this.tblpDownTools.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblpDownTools.Location = new System.Drawing.Point(0, 0);
+            this.tblpDownTools.Name = "tblpDownTools";
+            this.tblpDownTools.RowCount = 1;
+            this.tblpDownTools.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblpDownTools.Size = new System.Drawing.Size(800, 39);
+            this.tblpDownTools.TabIndex = 1;
             // 
             // btnSelectFile
             // 
@@ -157,6 +162,41 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.RestoreDirectory = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Column name";
+            // 
+            // tblpAddColumn
+            // 
+            this.tblpAddColumn.ColumnCount = 2;
+            this.tblpAddColumn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblpAddColumn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblpAddColumn.Controls.Add(this.btnAddColumn, 0, 0);
+            this.tblpAddColumn.Controls.Add(this.panel1, 1, 0);
+            this.tblpAddColumn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblpAddColumn.Location = new System.Drawing.Point(3, 3);
+            this.tblpAddColumn.Name = "tblpAddColumn";
+            this.tblpAddColumn.RowCount = 1;
+            this.tblpAddColumn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblpAddColumn.Size = new System.Drawing.Size(260, 49);
+            this.tblpAddColumn.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.tbColumnName);
+            this.panel1.Location = new System.Drawing.Point(133, 3);
+            this.panel1.MinimumSize = new System.Drawing.Size(0, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(123, 43);
+            this.panel1.TabIndex = 6;
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -171,10 +211,12 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDictionaryTable)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tblpUpperTools.ResumeLayout(false);
+            this.tblpDownTools.ResumeLayout(false);
+            this.tblpAddColumn.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -189,8 +231,11 @@
         private System.Windows.Forms.TextBox tbColumnName;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tblpUpperTools;
+        private System.Windows.Forms.TableLayoutPanel tblpDownTools;
+        private System.Windows.Forms.TableLayoutPanel tblpAddColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
